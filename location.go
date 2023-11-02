@@ -17,8 +17,7 @@ func (location *Location) GetLocation() string {
 	return location.Location
 }
 
-func (location *Location) SetLocation(locationString string) {
+func (location *Location) SetLocation() {
 	ds.Init()
-	ds.Put(location.UUID, locationString)
-	location.Location = locationString
+	ds.Put(location.UUID, location.Location)
 }
